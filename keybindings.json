@@ -1,0 +1,47 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "shift+alt+m",
+    "command": "workbench.action.toggleZenMode"
+  },
+  // Move cursor left right up down
+  {
+    "key": "alt+j",
+    "command": "cursorLeft",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+l",
+    "command": "cursorRight",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+i",
+    "command": "cursorUp",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+k",
+    "command": "cursorDown",
+    "when": "textInputFocus"
+  },
+  //   highlight left and right
+  {
+    "key": "shift+l",
+    "command": "cursorColumnSelectRight",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+j",
+    "command": "cursorColumnSelectLeft",
+    "when": "textInputFocus"
+  }
+]
