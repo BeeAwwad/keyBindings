@@ -1,20 +1,47 @@
 // Place your key bindings in this file to override the defaults
 [
+  // Move to next editor
   {
-    "key": "ctrl+l",
+    "key": "cmd+l",
     "command": "workbench.action.nextEditor"
   },
   {
-    "key": "ctrl+j",
+    "key": "cmd+h",
     "command": "workbench.action.previousEditor"
   },
   {
     "key": "shift+alt+m",
     "command": "workbench.action.toggleZenMode"
   },
+  // Move active editor left or right
+  {
+    "key": "cmd+ctrl+h",
+    "command": "moveActiveEditor",
+    "args": {
+      "to": "left"
+    }
+  },
+  {
+    "key": "cmd+ctrl+l",
+    "command": "moveActiveEditor",
+    "args": {
+      "to": "right"
+    }
+  },
+  // Traverse VSCode Intellisense sugetions with vim keybindings.
+  {
+    "key": "cmd+l",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "cmd+h",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
   // Move cursor left right up down
   {
-    "key": "alt+j",
+    "key": "alt+h",
     "command": "cursorLeft",
     "when": "textInputFocus"
   },
@@ -24,24 +51,47 @@
     "when": "textInputFocus"
   },
   {
-    "key": "alt+i",
+    "key": "alt+k",
     "command": "cursorUp",
     "when": "textInputFocus"
   },
   {
-    "key": "alt+k",
+    "key": "alt+j",
     "command": "cursorDown",
     "when": "textInputFocus"
   },
-  //   highlight left and right
   {
-    "key": "shift+l",
-    "command": "cursorColumnSelectRight",
+    "key": "ctrl+l",
+    "command": "-notebook.centerActiveCell",
+    "when": "notebookEditorFocused"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "-expandLineSelection",
     "when": "textInputFocus"
   },
   {
-    "key": "shift+j",
-    "command": "cursorColumnSelectLeft",
-    "when": "textInputFocus"
+    "key": "ctrl+l",
+    "command": "-workbench.action.chat.newChat",
+    "when": "chatIsEnabled && inChat"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "turboConsoleLog.displayLogMessage"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "-turboConsoleLog.displayLogMessage"
+  },
+  // move line up and down
+  {
+    "key": "cmd+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus"
   }
 ]
